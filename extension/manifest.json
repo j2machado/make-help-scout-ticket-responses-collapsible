@@ -1,0 +1,24 @@
+{
+	"manifest_version": 3,
+
+	"name": "Make Help Scout Threads Collapsible",
+	"description": "Collapse/Expand long conversation threads on Help Scout",
+	"version": "0.1.0",
+
+	"action": {
+    		"default_icon": {
+      		"48": "icons/48.png"
+    		}
+  	},
+
+  	 "content_scripts": [
+      {
+      "matches": ["https://*.secure.helpscout.net/*"],
+        "js": ["logic.js"]
+      }
+    ],
+
+	"permissions": [ 
+		"activeTab", "tabs" 
+	]
+}
